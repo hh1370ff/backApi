@@ -3,7 +3,7 @@ import asyncHandler from "express-async-handler";
 import axios from "axios";
 import Jimp from "jimp";
 import { encode } from "blurhash";
-import { client } from "../config/redis.js";
+import client from "../config/redis.js";
 import { URL } from "url";
 
 // @desc Create item

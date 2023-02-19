@@ -8,7 +8,7 @@ import { connect } from "./config/connect.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { corsOptions } from "./config/corsOptions.js";
-import { client } from "./config/redis.js";
+import client from "./config/redis.js";
 
 dotenv.config();
 const app = express();
