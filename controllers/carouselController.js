@@ -100,5 +100,5 @@ const cacheCarouselImages = async (carousels) => {
       return { carouselId: carousels[index]._id, imageURL: urlObject };
     })
   );
-  client.set("carouselImages", JSON.stringify(newCarouselsList));
+  await client.set("carouselImages", JSON.stringify(newCarouselsList));
 };

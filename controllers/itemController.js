@@ -118,5 +118,5 @@ const cacheItemImages = async (items) => {
       return { itemId: items[index]._id, imageURL: urlObject };
     })
   );
-  client.set("itemImages", JSON.stringify(newItemsList));
+  await client.set("itemImages", JSON.stringify(newItemsList));
 };
