@@ -9,6 +9,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import { corsOptions } from "./config/corsOptions.js";
 import client from "./config/redis.js";
+import { errorHandler } from "./middleWares/errorHandler.js";
 dotenv.config();
 
 const app = express();
@@ -22,6 +23,8 @@ app.use("/api/items", itemRouter);
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/carousel", carouselRouter);
+
+app.use(errorHandler);
 
 app.listen(port, async () => {
   connect();
